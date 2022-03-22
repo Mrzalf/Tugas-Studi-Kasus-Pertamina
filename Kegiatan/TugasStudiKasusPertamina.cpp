@@ -53,3 +53,47 @@ void Bensin::pilihan(){
      system("cls");
      pilihan();    
      }
+void Bensin::hitung_uang(){
+     cout<<"masukkan besarnya uang : ";
+     cin>> uang;
+     if(ambil == 'a'){
+              harga = pertalite;
+              }
+     else if (ambil == 'b'){
+          harga = pertamax;
+          }
+     tampil = uang / harga;
+     if(ambil == 'a'){
+        	cout << "\n=======Struk SPBU UAD=======" << endl;
+			cout << "\nNama Pelanggan  : " << na << endl;
+			cout << "Total Liter \t: " << tampil << endl;
+            cout << "Jenis Bensin \t: " << "Pertalite" << endl;
+            cout << "Total Harga \t: " << uang << endl;
+            ofstream hsl;
+        	hsl.open("struct.txt", ios::out);
+        	hsl <<  "\n=======Struk SPBU UAD=======" << endl;
+        	hsl <<  "Nama Pelanggan : " << na << endl;
+        	hsl <<  "Total Liter \t: " << tampil << endl;
+        	hsl <<  "Jenis Bensin \t: " << "Pertalite" << endl;
+        	hsl <<  "Total Harga \t: " << uang << endl;
+        	hsl.close();
+              }
+     else if (ambil == 'b'){
+	 		cout << "\n=======Struk SPBU UAD=======" << endl;
+			cout << "Nama Pelanggan : " << na << endl;
+			cout << "Total Liter \t: " << tampil << endl;
+            cout << "Jenis Bensin \t: " << "Pertamax" << endl;
+            cout << "Total Harga \t: " << uang << endl;
+            ofstream hsl;
+        	hsl.open("struct.txt", ios::out);
+        	hsl <<  "\n=======Struk SPBU UAD=======" << endl;
+        	hsl <<  "Nama Pelanggan : " << na << endl;
+        	hsl <<  "Total Liter \t: " << tampil << endl;
+        	hsl <<  "Jenis Bensin \t: " << "Pertamax" << endl;
+        	hsl <<  "Total Harga \t: " << uang << endl;
+        	hsl.close();
+	 }
+     system("PAUSE");
+     system("cls");
+     pilihan();
+     }
